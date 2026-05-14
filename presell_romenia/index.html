@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De ce toată România vorbește despre această rețetă veche de miere?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;background:#fff;color:#333;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ===== TOPBAR ===== */
+.topbar{background:#1a1a1a;padding:8px 0}
+.topbar-inner{max-width:680px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.topbar-logo{font-family:'Merriweather',serif;font-size:16px;color:#fff;font-weight:700}
+.topbar-logo span{color:#e8a84c}
+.topbar-nav{display:flex;gap:16px}
+.topbar-nav a{font-size:11px;color:rgba(255,255,255,.6);transition:color .2s}
+.topbar-nav a:hover{color:#e8a84c}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{max-width:680px;margin:0 auto;padding:12px 20px 0;font-size:11px;color:#aaa}
+.breadcrumb a{color:#888}
+.breadcrumb a:hover{color:#e8a84c}
+.breadcrumb span{margin:0 4px;color:#ccc}
+
+/* ===== ARTICLE ===== */
+.article{max-width:680px;margin:0 auto;padding:16px 20px 30px}
+
+/* ===== CAT + META ===== */
+.cat-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.cat-pill{display:inline-block;background:#e8a84c;color:#fff;font-size:9px;font-weight:700;padding:3px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+.meta-text{font-size:11px;color:#999}
+
+/* ===== HEADLINE ===== */
+h1{font-family:'Merriweather',serif;font-size:26px;color:#1a1a1a;line-height:1.35;font-weight:900;margin-bottom:10px}
+h1 em{color:#c4872e;font-style:normal}
+
+/* ===== LEAD ===== */
+.lead{font-size:17px;color:#555;line-height:1.7;margin-bottom:16px;font-weight:300;border-left:4px solid #e8a84c;padding-left:16px}
+
+/* ===== HERO ===== */
+.hero-wrap{margin-bottom:4px;border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);border:3px dashed #e8a84c}
+.hero-wrap img{width:100%;cursor:pointer;transition:transform .3s}
+.hero-wrap img:hover{transform:scale(1.01)}
+.hero-cap{font-size:10px;color:#bbb;padding:5px 0 16px;font-style:italic}
+
+/* ===== CTA ENORME ===== */
+.cta-mega{margin:20px 0;padding:26px 24px;background:linear-gradient(135deg,#e8a84c,#c4872e);border-radius:12px;text-align:center;box-shadow:0 10px 40px rgba(232,168,76,.3)}
+.cta-mega h2{font-family:'Merriweather',serif;font-size:20px;color:#fff;font-weight:700;margin-bottom:6px;line-height:1.3}
+.cta-mega p{font-size:13px;color:rgba(255,255,255,.85);margin-bottom:16px;font-weight:300}
+.btn-giant{display:block;width:100%;background:#1a1a1a;color:#fff;padding:22px 30px;font-size:21px;font-weight:700;border-radius:10px;text-align:center;transition:all .25s;letter-spacing:.3px}
+.btn-giant:hover{background:#333;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.cta-mega small{display:block;margin-top:10px;font-size:10px;color:rgba(255,255,255,.6)}
+
+/* ===== TEXT ===== */
+.art-text{font-size:17px;line-height:2;color:#444;margin-bottom:16px;font-weight:400}
+.art-text strong{color:#1a1a1a;font-weight:600}
+.art-text em{color:#c4872e;font-style:normal;font-weight:600}
+
+/* ===== QUESTION BANNER ===== */
+.q-banner{margin:22px 0;padding:20px 22px;background:#faf6f0;border-radius:10px;border:2px solid #e8a84c}
+.q-banner h3{font-family:'Merriweather',serif;font-size:19px;color:#1a1a1a;font-weight:700;line-height:1.4}
+.q-banner h3 em{color:#c4872e;font-style:normal}
+
+/* ===== ACCORDION FAQ ===== */
+.faq{margin:22px 0}
+.faq-title{font-family:'Merriweather',serif;font-size:18px;color:#1a1a1a;font-weight:700;margin-bottom:14px;text-align:center}
+.faq-item{margin-bottom:10px;border:1px solid #e8e4dc;border-radius:10px;overflow:hidden;background:#fff;transition:box-shadow .2s}
+.faq-item:hover{box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;cursor:pointer;gap:12px}
+.faq-q h4{font-size:15px;color:#1a1a1a;font-weight:600;flex:1}
+.faq-arrow{font-size:18px;color:#e8a84c;transition:transform .3s;flex-shrink:0}
+.faq-a{padding:0 20px 16px;font-size:14px;color:#666;line-height:1.8;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial{margin:22px 0;display:flex;gap:16px;background:#faf6f0;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04);border:2px dashed #e8a84c}
+.t-img{width:42%;flex-shrink:0}
+.t-img img{width:100%;height:100%;object-fit:cover;cursor:pointer}
+.t-body{padding:20px 18px;display:flex;flex-direction:column;justify-content:center}
+.t-quote{font-family:'Merriweather',serif;font-size:15px;color:#444;font-style:italic;line-height:1.7;margin-bottom:10px}
+.t-name{font-size:12px;color:#c4872e;font-weight:700}
+@media(max-width:600px){
+.testimonial{flex-direction:column}
+.t-img{width:100%;height:220px}
+}
+
+/* ===== HIGHLIGHT ===== */
+.highlight{margin:22px 0;padding:18px 22px;background:#1a1a1a;border-radius:10px;text-align:center}
+.highlight p{font-family:'Merriweather',serif;font-size:16px;color:#e8a84c;font-style:italic;line-height:1.6}
+
+/* ===== CTA BOTTOM ===== */
+.cta-bottom{margin:22px 0;padding:30px 24px;background:#1a1a1a;border-radius:12px;text-align:center;border:3px solid #e8a84c}
+.cta-bottom h3{font-family:'Merriweather',serif;font-size:22px;color:#e8a84c;margin-bottom:6px;font-weight:700}
+.cta-bottom p{font-size:14px;color:#aaa;margin-bottom:18px;font-weight:300}
+.btn-giant-alt{display:block;width:100%;background:#e8a84c;color:#1a1a1a;padding:24px 30px;font-size:22px;font-weight:700;border-radius:10px;text-align:center;transition:all .25s}
+.btn-giant-alt:hover{background:#d4962e;transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,168,76,.4)}
+.cta-bottom small{display:block;margin-top:10px;font-size:10px;color:#666}
+
+/* ===== DISCLAIMER ===== */
+.disclaimer{margin:28px 0 0;padding:22px;background:#f8f6f2;border-radius:10px;border:1px solid #e8e4dc}
+.disclaimer h4{font-family:'Merriweather',serif;font-size:13px;color:#666;margin-bottom:10px;font-weight:700}
+.disclaimer p{font-size:11px;color:#888;line-height:1.9;margin-bottom:8px}
+.disclaimer p:last-child{margin-bottom:0}
+.disclaimer strong{color:#666}
+
+/* ===== FOOTER ===== */
+footer{max-width:680px;margin:0 auto;padding:20px 20px 40px;border-top:1px solid #eee}
+.footer-company{margin-bottom:14px;padding:16px 18px;background:#f8f6f2;border-radius:8px}
+.footer-company h5{font-family:'Merriweather',serif;font-size:13px;color:#1a1a1a;margin-bottom:6px}
+.footer-company p{font-size:10px;color:#888;line-height:1.9}
+.footer-links{text-align:center;font-size:10px;color:#aaa;margin-top:10px}
+.footer-links a{color:#c4872e;margin:0 8px}
+.footer-links a:hover{text-decoration:underline}
+.footer-copy{text-align:center;font-size:9px;color:#bbb;margin-top:8px}
+
+@media(max-width:640px){
+h1{font-size:21px}
+.btn-giant{font-size:18px;padding:20px}
+.btn-giant-alt{font-size:19px;padding:22px}
+.art-text{font-size:16px}
+.cta-mega h2{font-size:17px}
+.cta-bottom h3{font-size:19px}
+.topbar-nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+<div class="topbar-inner">
+<div class="topbar-logo">Român<span>Sănătate</span></div>
+<div class="topbar-nav">
+<a href="#">Sănătate</a>
+<a href="#">Metode naturale</a>
+<a href="#">Rețete</a>
+</div>
+</div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+<a href="#">Acasă</a><span>›</span>
+<a href="#">Sănătate</a><span>›</span>
+<a href="#">Metode naturale</a><span>›</span>
+Rețeta veche de miere
+</div>
+
+<!-- ARTICLE -->
+<article class="article">
+
+<!-- CAT + META -->
+<div class="cat-meta">
+<span class="cat-pill">Sănătate naturală</span>
+<span class="meta-text"><script>var d=new Date();var m=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];document.write(d.getFullYear()+'. '+m[d.getMonth()]+' '+d.getDate()+'.')</script> · 4 minute de citit</span>
+</div>
+
+<!-- HEADLINE -->
+<h1>De ce toată România vorbește <em>despre această rețetă veche de miere?</em></h1>
+
+<!-- LEAD -->
+<p class="lead">Povestea unui apicultor de 71 de ani din București, care a urmat o simplă obicei matinal — și toți cei din jur au observat diferența.</p>
+
+<!-- HERO -->
+<div class="hero-wrap">
+<a href="https://lp.proeliteaim.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/honey_hero-MipXbc2uKw4CX9oPhZCEks.webp" alt="Miere de albine românească cu ingrediente naturale"></a>
+</div>
+<p class="hero-cap">Foto: Miere de albine românească cu ingrediente naturale</p>
+
+<!-- ========== CTA 1 — ENORME ========== -->
+<div class="cta-mega">
+<h2>▶ Vedeți videoclipul care arată rețeta completă pas cu pas</h2>
+<p>Ce ingrediente să folosiți · Cum să le amestecați · Când să beți</p>
+<a href="https://lp.proeliteaim.shop/preclick" class="btn-giant">FACEȚI CLIC AICI PENTRU VIDEO →</a>
+<small>Conținut informativ gratuit · Fără înregistrare</small>
+</div>
+
+<!-- TEXT -->
+<p class="art-text">Cunoașteți acel sentiment? Intrați în bucătărie — și <strong>nu vă amintiți de ce ați intrat.</strong> Vă întâlniți cu un vechi prieten — și <strong>nu vă amintiți numele lui.</strong> Puneți ochelarii jos — și <strong>îi căutați minute în șir.</strong></p>
+
+<p class="art-text">Majoritatea oamenilor spun: <em>„E normal, nu se poate face nimic."</em></p>
+
+<p class="art-text">Dar dacă <strong>aceasta nu e toată povestea?</strong></p>
+
+<!-- QUESTION BANNER -->
+<div class="q-banner">
+<h3>Dacă <em>claritatea mentală</em> stă ascunsă în obiceiurile noastre matinale?</h3>
+</div>
+
+<p class="art-text">Un apicultor de 71 de ani — care lucrează în apicultură de 50 de ani — a început să bea zilnic o <em>simplă rețetă cu miere.</em> A învățat rețeta de la <strong>tatăl său</strong>, care a moștenit-o de la <strong>tatăl lui.</strong> Nu e o preparare scumpă. Nu e complicată. Doar <strong>o lingură de miere</strong> — dar <em>nu cum crezi tu.</em></p>
+
+<p class="art-text">Pentru că miera singură e doar un edulcorant. Dar dacă o <strong>combini cu câțiva alți ingredienți</strong> — pe care fiecare bucătărie românească îi are — și o <em>bei dimineața, pe stomacul gol</em>... atunci e ceva cu totul diferit.</p>
+
+<p class="art-text">Acest apicultor o face de 50 de ani. Și acum spune: <em>„Am reușit să fac asta pentru că nu am uitat niciodată nimic."</em></p>
+
+<!-- FAQ ACCORDION -->
+<div class="faq">
+<h3 class="faq-title">Ce vei afla din videoclip:</h3>
+
+<div class="faq-item open">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+<h4>Ce substanță naturală din miere a atras atenția cercetătorilor?</h4>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Videoclipul îți arată acea substanță naturală despre care nu știe lumea — și pe care cercetătorii o studiază intens.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+<h4>Care sunt cei patru ingredienți de zi cu zi pe care trebuie să îi adaugi?</h4>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Patru ingredienți pe care îi găsești în orice bucătărie românească. Videoclipul arată exact care sunt și de ce anume aceștia.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+<h4>De ce contează ordinea în care îi amesteci?</h4>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Ordinea e importantă — videoclipul explică de ce și ce se întâmplă dacă o faci greșit.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+<h4>De ce anume dimineața, pe stomacul gol?</h4>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Apicultorii români știu de generații: timing-ul e cel mai important. Videoclipul explică de ce.</div>
+</div>
+
+</div>
+
+<!-- TESTIMONIAL WITH DASHED BORDER -->
+<div class="testimonial">
+<div class="t-img">
+<a href="https://lp.proeliteaim.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/honey_comb-VXbFc6rgBVwek9KZ6NvTym.webp" alt="Apicultor român metoda tradițională"></a>
+</div>
+<div class="t-body">
+<p class="t-quote">„O fac de trei luni în fiecare dimineață. Înainte căutam mereu cheile, uitam nume de vecini. Acum soția îmi spune: 'Ești ca înainte.' Și eu doar zâmbesc."</p>
+<p class="t-name">— Ioan Popescu, 71 de ani, București</p>
+</div>
+</div>
+
+<!-- HIGHLIGHT -->
+<div class="highlight">
+<p>„Nu miera singură e secretul — ci ceea ce se întâmplă când o combini cu ingredientele potrivite, la momentul potrivit."</p>
+</div>
+
+<!-- ========== CTA 2 — ENORME ========== -->
+<div class="cta-bottom">
+<h3>Vedeți rețeta completă — pas cu pas</h3>
+<p>Ingrediente precise · Proporții corecte · Momentul ideal · Tot într-un scurt videoclip</p>
+<a href="https://lp.proeliteaim.shop/preclick" class="btn-giant-alt">VEDEȚI VIDEOCLIPUL ACUM →</a>
+<small>Conținut informativ gratuit · Fără înregistrare</small>
+</div>
+
+<!-- ===== DISCLAIMER COMPLETO ===== -->
+<div class="disclaimer">
+<h4>Declarație juridică și excludere de răspundere</h4>
+<p>Acest site este <strong>exclusiv informativ</strong> și nu constituie sfat medical, sanitar sau profesional. Informațiile prezentate aici nu înlocuiesc consultația medicală, diagnosticul sau tratamentul.</p>
+<p>Suplimentele alimentare nu înlocuiesc o dietă variată, echilibrată și un stil de viață sănătos. Rezultatele individuale pot varia. Înainte de orice schimbare a dietei sau stilului de viață, <strong>consultați-vă cu medicul dumneavoastră.</strong></p>
+<p>Opiniile și mărturisirile din acest site <strong>reflectă experiențe personale</strong> și nu constituie dovezi științifice. Acest site nu susține că vreun produs sau metodă este potrivit pentru prevenirea, tratamentul sau vindecarea bolilor.</p>
+<p>Linkurile externe de pe acest site pot conduce la site-uri terțe, pentru al căror conținut și politici de confidențialitate nu suntem răspunzători.</p>
+<p><strong>Operator:</strong> Sănătate Naturală Românească S.R.L. &middot; <strong>Număr de înregistrare (CNPJ):</strong> 64.923.751/0001-62 &middot; <strong>Sediu:</strong> 030167 București, Strada Lipscani 55, România &middot; <strong>E-mail:</strong> info@sanatate-romana.ro &middot; <strong>Activitate:</strong> Servicii informative online și editare de conținut</p>
+</div>
+
+</article>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-company">
+<h5>Sănătate Naturală Românească S.R.L.</h5>
+<p>
+<strong>Număr de înregistrare (CNPJ):</strong> 64.923.751/0001-62<br>
+<strong>Sediu:</strong> 030167 București, Strada Lipscani 55, România<br>
+<strong>E-mail:</strong> info@sanatate-romana.ro<br>
+<strong>Activitate:</strong> Servicii informative online și editare de conținut<br>
+<strong>Persoană responsabilă:</strong> Dr. Elena Ionescu
+</p>
+</div>
+<div class="footer-links">
+<a href="privacy.html">Politica de confidențialitate</a>
+<a href="terms.html">Termeni și condiții</a>
+</div>
+<p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Sănătate Naturală Românească S.R.L. Toate drepturile rezervate.</p>
+</footer>
+
+<!-- UTM PASSTHROUGH -->
+<script>
+(function(){var q=window.location.search;if(!q)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:'))return;a.setAttribute('href',h.includes('?')?h+'&'+q.substring(1):h+q)})})();
+</script>
+<script type="text/javascript" src="https://lp.proeliteaim.shop/pretrack.js?rtkcmpid=6a04988c3d70150e898f53c7"></script>
+</body>
+</html>
